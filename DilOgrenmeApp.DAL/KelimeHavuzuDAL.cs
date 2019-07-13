@@ -143,35 +143,9 @@ namespace DilOgrenmeApp.DAL
                 _kelime.asamaNo = dt.Rows[0].Field<int>("asamaNo").ToString();
                 Console.WriteLine(_kelime.turkce);
                 Console.WriteLine(_kelime.asamaNo);
-                if (_kelime.asamaNo == "1")
-                {
-                    _kelime.sormaTarihi = DateTime.Now.AddDays(1).ToShortDateString();
-                }
-                else if (_kelime.asamaNo == "2")
-                {
-                    _kelime.sormaTarihi = DateTime.Now.AddDays(6).ToShortDateString();
-                }
-                else if (_kelime.asamaNo == "3")
-                {
-                    _kelime.sormaTarihi = DateTime.Now.AddDays(23).ToShortDateString();
-                }
-                else if (_kelime.asamaNo == "4")
-                {
-                    _kelime.sormaTarihi = DateTime.Now.AddDays(150).ToShortDateString();
-                }
-                else if (_kelime.asamaNo == "5")
-                {
-                    _kelime.sormaTarihi = DateTime.Now.AddDays(0).ToShortDateString();
-                }
-                else if (_kelime.asamaNo == "6")
-                {
-                    _kelime.sormaTarihi = DateTime.Now.AddDays(0).ToShortDateString();
-                }
-                else if (_kelime.asamaNo == "0")
-                {
-                    _kelime.sormaTarihi = DateTime.Now.AddDays(1).ToShortDateString();
-                }
+               
             }
+           
             
             SqlCommand cmd = dbHelper.GetSqlCommand();
             cmd.CommandText =( "UPDATE  DilOgrenmeOtomasyon.dbo.KelimeHavuzu SET sormaTarihi = @sormaTarihi WHERE ingilizce=@ingilizce");
@@ -215,6 +189,38 @@ namespace DilOgrenmeApp.DAL
             cmd.ExecuteNonQuery();
             
         }
+      public Datetime kelimeTarihGuncelleme()
+      {
+          if (_kelime.asamaNo == "1")
+                {
+                    _kelime.sormaTarihi = DateTime.Now.AddDays(1).ToShortDateString();
+                }
+                else if (_kelime.asamaNo == "2")
+                {
+                    _kelime.sormaTarihi = DateTime.Now.AddDays(6).ToShortDateString();
+                }
+                else if (_kelime.asamaNo == "3")
+                {
+                    _kelime.sormaTarihi = DateTime.Now.AddDays(23).ToShortDateString();
+                }
+                else if (_kelime.asamaNo == "4")
+                {
+                    _kelime.sormaTarihi = DateTime.Now.AddDays(150).ToShortDateString();
+                }
+                else if (_kelime.asamaNo == "5")
+                {
+                    _kelime.sormaTarihi = DateTime.Now.AddDays(0).ToShortDateString();
+                }
+                else if (_kelime.asamaNo == "6")
+                {
+                    _kelime.sormaTarihi = DateTime.Now.AddDays(0).ToShortDateString();
+                }
+                else if (_kelime.asamaNo == "0")
+                {
+                    _kelime.sormaTarihi = DateTime.Now.AddDays(1).ToShortDateString();
+                }
+         return _kelime.sormaTarihi;
+      }
        
     }
 }
