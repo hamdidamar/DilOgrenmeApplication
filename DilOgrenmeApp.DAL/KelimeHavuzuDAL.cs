@@ -141,9 +141,7 @@ namespace DilOgrenmeApp.DAL
                 _kelime.ingilizce = dt.Rows[0].Field<string>("ingilizce");
                 _kelime.turkce = dt.Rows[0].Field<string>("turkce");
                 _kelime.asamaNo = dt.Rows[0].Field<int>("asamaNo").ToString();
-                Console.WriteLine(_kelime.turkce);
-                Console.WriteLine(_kelime.asamaNo);
-               
+                
             }
            
             
