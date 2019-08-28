@@ -14,7 +14,7 @@ namespace DilOgrenmeApp.DAL
 
         public DBHelper()
         {
-            _connectionSting = @"Data Source=DESKTOP-K2NN6MN\SQL_2014;Initial Catalog=DilOgrenmeOtomasyon;Integrated Security=True";
+            _connectionSting = @"Veri Tabanı Bağlantınız";
 
         }
 
