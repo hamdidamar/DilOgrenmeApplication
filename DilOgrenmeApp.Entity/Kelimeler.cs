@@ -8,8 +8,6 @@ namespace DilOgrenmeApp.Entity
 {
    public class Kelimeler
     {
-        public List<Kelimeler> listKelimeler;
-        public List<Kelimeler> ogrenilenKelimeler;
         public int Id { get; set; }
         public string ingilizce { get; set; }
         public string turkce { get; set; }
