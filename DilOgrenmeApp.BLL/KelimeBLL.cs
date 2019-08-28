@@ -66,7 +66,5 @@ namespace DilOgrenmeApp.BLL
         {
             _kelimeHavuzu.DeleteItem(kelimeHavuzu);
         }
-
-        
     }
 }
